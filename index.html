@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Unique URL and Shareable Resume </title>
+</head>
+<body>
+    <h1>Unique URL and Shareable Resume Builder <br>by 
+        <br>Zubair Ahmad Baloch</h1>
+    <form id="resume-form">
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label for="username">Resume URL:</label>
+            <input type="text" id="username" placeholder="Enter your username" required>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="f/name">F/Name:</label>
+            <input type="text" id="f/name" placeholder="Enter your Father name" required>
+
+            <label for="caste">Caste:</label>
+            <input type="text" id="caste" placeholder="Enter your caste">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email ID" required>
+
+            <label for="phone">Contact No:</label>
+            <input type="tel" id="phone" placeholder="Enter your phone no" required>
+
+            <!-- Adding Profile Picture -->
+             <label for="profilepicture">Profile Picture</label>
+             <input type="file" id="profilepicture" name="profilepicture" accept="image/*" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Education</legend>
+            <label for="education">Education:</label>
+            <textarea id="education" placeholder="Enter your education" rows="6" required></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Experience</legend>
+            <label for="experience">Experience:</label>
+            <textarea id="experience" placeholder="Enter your work experience" rows="6"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Skills</legend>
+            <label for="skills">Skills:</label>
+            <textarea id="skills" placeholder="Enter your skills" rows="6" required></textarea>
+        </fieldset>
+
+        <button type="submit"><b>Generate Resume</b></button>
+    </form>
+
+    <br>
+
+    <!-- Dynamic and Shareable Resume -->
+
+     <div id="resume-display" contenteditable="true"> <!--contenteditable attribute helps to make content editable directly in browser without reloading it. -->
+        <!-- Resume will be generated below -->
+    </div>
+    <br>
+
+    <!-- Section for the Shareable link and download option -->
+     <div id="shareable-link-container" style="display: none;">
+        <button id="shareable-button" onclick="window.open('#', '_blank')"><b>Shareable Link</b></button>
+        <h3 style="color: rgb(249, 249, 132);"><b>Unique URL:</b></h3>
+        <a href="#" id="shareable-link" target="_black"></a>
+        <button id="download-pdf">Download as PDF</button>
+     </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
